@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Calling</title>
+</head>
+<body>
+    <div id="id"></div>
+</body>
+
+<script src="https://resource.zegocloud.com/prebuilt/crypto-js.js"></script>
+<script src="https://resource.zegocloud.com/prebuilt/prebuiltToken.js"></script>
+<script src="https://zegocloud.github.io/zegocloud_prebuilt_webrtc/ZegoPrebuilt/index.umd.js"></script>
+<script>
+
+    const TOKEN = generatePrebuiltToken(1988452217,"3ffe4a74d24173e5bf65851851447d1e",'room2','UserID-' + Math.random(),'jack'+ Math.random());
+    
+    const zp = ZegoUIKitPrebuilt.create(TOKEN);
+    zp.joinRoom({
+        container : document.querySelector("#root"),
+    });
+    </script>
+</html>
